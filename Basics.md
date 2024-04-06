@@ -1,6 +1,14 @@
 ### What is Machine Learning?
 Machine learning is a subfield of Artificial Intelligence (AI) that allows computers to learn from data without explicit programming.  Instead of writing out every instruction, machines can improve at a specific task by analyzing data. This data can be used to predict future values, classify information, or find hidden patterns.
 
+#### Types of Machine Learning**
+There are two main categories of machine learning: **supervised learning** and **unsupervised learning**. These categories are determined by the type of data and the learning objective.
+* **Supervised Learning:** In supervised learning, the data is labeled. This means each data point has a corresponding label or target value that the model is trying to predict. The model learns the relationship between the features (inputs) and the target variables (labels) during training. Then, it can use this learned relationship to predict the target variable for new, unseen data points. 
+    * Common supervised learning tasks include classification (e.g., spam detection, image recognition) and regression (e.g., weather forecasting, stock price prediction).
+
+* **Unsupervised Learning:** In unsupervised learning, the data is unlabeled. The model does not have any predefined labels or target values. The goal of unsupervised learning is to uncover hidden patterns or structures within the data itself. These patterns can be used for tasks like anomaly detection, customer segmentation, or dimensionality reduction.
+    * Common unsupervised learning tasks include clustering (e.g., grouping similar data points together) and dimensionality reduction (e.g., reducing the number of features without losing important information).
+
 #### Common Terms in Machine Learning**
 * **Data** (Input): The raw information used to train a machine learning model. Data can come in many forms like numbers, text, or images.
 * **Model:**  The representation of the learned knowledge from the data. This can be a mathematical equation, a computer program, or a set of rules. 
