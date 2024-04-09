@@ -64,3 +64,19 @@ Mathematically, Mean Squared Error (MSE) is calculated as the average of the squ
 
 ##### Gradient Descent
 Gradient Descent is an iterative optimization algorithm used to find the minimum of a function. In the context of linear regression, it can be used to minimize the cost function associated with the model parameters (e.g., MSE). It iteratively updates the parameters in the direction of the steepest descent of the cost function until convergence is reached.
+
+#### Stochastic Gradient Descent 
+Stochastic Gradient Descent (SGD) is a variant of the gradient descent algorithm commonly used in training machine learning models, especially when dealing with large datasets. Unlike regular gradient descent, which computes the gradient of the cost function using the entire dataset, SGD updates the model parameters using only a single data point (or a small subset) at a time. This makes SGD faster and more scalable, especially for large datasets.
+
+#### Classifier
+It refers to a type of model used for classification tasks. A classifier is a supervised learning algorithm that assigns a class label to input data based on its features. The goal of classification is to learn a mapping from input features to class labels.
+
+
+#### KNN
+K-Nearest Neighbors (KNN) is a ML algorithm used for classification and regression tasks. It determines the class or value of a new data point by examining the 'k' nearest neighbors in the feature space and using their information. 
+
+The choice of 'k' influences model performance, with larger 'k' values providing smoother decision boundaries but potentially overlooking local patterns.
+- KNN is simple to understand and implement.
+- KNN memorizes the entire training dataset and uses it during prediction.
+- KNN measures the similarity between data points using distance metrics.
+- KNN's computational complexity grows with dataset size due to distance calculations. 
