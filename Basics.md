@@ -50,19 +50,19 @@ The coefficients \( m \) and \( c \) are estimated from the data to minimize the
 2. **Multiple Linear Regression**: In multiple linear regression, there are multiple independent variables. The equation of the linear model is extended to accommodate multiple predictors:
 ![multiple linear regression](https://imgur.com/Vloky0u.png)
 
-#### Important Algorithms and Terminologies
+### Important Algorithms and Terminologies
 
-##### Cost or loss function
+#### Cost or loss function
 The cost or loss function, also known as the objective function, is a mathematical function that quantifies the difference between the predicted values of a model and the actual values of the target variable (dependent variable) in a dataset. It represents how well the model is performing on the given data.
 
 In the context of linear regression, the most commonly used cost or loss function is the Mean Squared Error (MSE). The MSE measures the average squared difference between the predicted values and the actual values of the target variable.
 
-##### MSE
+#### MSE
 MSE stands for Mean Squared Error. It is a commonly used metric for evaluating the performance of a regression model, including linear regression.
 
 Mathematically, Mean Squared Error (MSE) is calculated as the average of the squared differences between the actual values (observed values) and the predicted values of the dependent variable. It provides a measure of the average squared deviation of the predictions from the actual values.
 
-##### Gradient Descent
+#### Gradient Descent
 Gradient Descent is an iterative optimization algorithm used to find the minimum of a function. In the context of linear regression, it can be used to minimize the cost function associated with the model parameters (e.g., MSE). It iteratively updates the parameters in the direction of the steepest descent of the cost function until convergence is reached.
 
 #### Stochastic Gradient Descent 
