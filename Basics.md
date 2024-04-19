@@ -84,7 +84,7 @@ The choice of 'k' influences model performance, with larger 'k' values providing
 #### One Hot Encoding
 One-hot encoding is a technique used in machine learning to convert categorical variables into a numerical format that can be provided to machine learning algorithms to improve performance. It involves representing each categorical variable as a binary vector.
 
-**Example**:  A list of colors: [`red`, `blue`, `green`] is given, with one-hot encoding, it becomes:
+**Example**: A list of colors: [`red`, `blue`, `green`] is given, with one-hot encoding, it becomes:
 - `red` becomes `[1, 0, 0]`
 - `blue` becomes `[0, 1, 0]`
 - `green` becomes `[0, 0, 1]`
