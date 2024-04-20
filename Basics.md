@@ -11,11 +11,11 @@ There are two main categories of machine learning: **supervised learning** and *
 
 #### Common Terms in Machine Learning
 * **Data** (Input): The raw information used to train a machine learning model. Data can come in many forms like numbers, text, or images.
-* **Model**:  The representation of the learned knowledge from the data. This can be a mathematical equation, a computer program, or a set of rules. 
+* **Model**: The representation of the learned knowledge from the data. This can be a mathematical equation, a computer program, or a set of rules. 
 * **Training** (Learning): The process of feeding data to the model and adjusting its internal parameters to improve performance on a specific task. 
-* **Prediction** (Output):  The model's output after being trained on data. Predictions can be used for various purposes like forecasting future values or classifying new data points.
-* **Features** (Attributes):  The individual attributes or measurements used to describe a data point.  These features are fed into the model to make predictions.
-* **Target Variable (Label)**:  The value the model is trying to predict. This can be a numerical value or a category label. In essence, it's the **desired outcome** the model is trying to learn and predict based on the features. For example, in an image classification task, the features might be pixel values of an image, and the label could be the category of the object in the image (e.g., cat, dog, car).
+* **Prediction** (Output): The model's output after being trained on data. Predictions can be used for various purposes like forecasting future values or classifying new data points.
+* **Features** (Attributes): The individual attributes or measurements used to describe a data point. These features are fed into the model to make predictions.
+* **Target Variable (Label)**: The value the model is trying to predict. This can be a numerical value or a category label. In essence, it's the **desired outcome** the model is trying to learn and predict based on the features. For example, in an image classification task, the features might be pixel values of an image, and the label could be the category of the object in the image (e.g., cat, dog, car).
 
 #### Commonly Used Machine Learning Algorithms (Basic Definitions)
 * **Linear Regression**: This algorithm finds a linear relationship between features and a target variable. It's often used for prediction tasks like forecasting future sales or stock prices.
@@ -71,11 +71,10 @@ Stochastic Gradient Descent (SGD) is a variant of the gradient descent algorithm
 #### Classifier
 It refers to a type of model used for classification tasks. A classifier is a supervised learning algorithm that assigns a class label to input data based on its features. The goal of classification is to learn a mapping from input features to class labels.
 
-
 #### KNN
-K-Nearest Neighbors (KNN) is a ML algorithm used for classification and regression tasks. It determines the class or value of a new data point by examining the 'k' nearest neighbors in the feature space and using their information. 
+K-Nearest Neighbors (KNN) is a ML algorithm used for classification and regression tasks. It determines the class or value of a new data point by examining the `k` nearest neighbors in the feature space and using their information. 
 
-The choice of 'k' influences model performance, with larger 'k' values providing smoother decision boundaries but potentially overlooking local patterns.
+The choice of `k` influences model performance, with larger `k` values providing smoother decision boundaries but potentially overlooking local patterns.
 - KNN is simple to understand and implement.
 - KNN memorizes the entire training dataset and uses it during prediction.
 - KNN measures the similarity between data points using distance metrics.
