@@ -51,7 +51,6 @@ The coefficients \( m \) and \( c \) are estimated from the data to minimize the
 ![multiple linear regression](https://imgur.com/Vloky0u.png)
 
 ### Important Algorithms and Terminologies
-
 #### Cost or loss function
 The cost or loss function, also known as the objective function, is a mathematical function that quantifies the difference between the predicted values of a model and the actual values of the target variable (dependent variable) in a dataset. It represents how well the model is performing on the given data.
 
