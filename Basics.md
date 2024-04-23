@@ -88,3 +88,13 @@ One-hot encoding is a technique used in machine learning to convert categorical 
 - `green` becomes `[0, 0, 1]`
 
 Each position in the vector corresponds to a unique category, and only one position is "hot" (i.e., set to 1) to indicate the presence of that category. This encoding ensures that machine learning algorithms can effectively interpret and utilize categorical data in their calculations.
+
+#### Overfitting
+It occurs when a model learns the training data too well, capturing noise and random fluctuations in the data rather than the underlying pattern. As a result, an overfitted model performs well on the training data but poorly on unseen data. It essentially memorizes the training data instead of learning the generalizable patterns.
+
+**Analogy**: Imagine a student who memorizes the answers to a specific set of practice questions without understanding the underlying concepts. When faced with similar but slightly different questions in the exam, the student struggles to answer correctly because they haven't truly learned the material.
+
+#### Underfitting
+It happens when a model is too simple to capture the underlying structure of the data. It fails to learn the patterns present in the training data and performs poorly both on the training data and unseen data. An underfitted model lacks the complexity to represent the relationship between the features and the target variable adequately.
+
+**Analogy**: Consider a student who only studies the first chapter of a textbook before taking an exam that covers the entire book. Without learning the full breadth of the material, the student is ill-prepared to answer questions on topics beyond the first chapter.
