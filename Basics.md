@@ -1,5 +1,5 @@
 ### What is Machine Learning?
-Machine learning is a subfield of Artificial Intelligence (AI) that allows computers to learn from data without explicit programming.  Instead of writing out every instruction, machines can improve at a specific task by analyzing data. This data can be used to predict future values, classify information, or find hidden patterns.
+Machine learning is a subfield of Artificial Intelligence (AI) that allows computers to learn from data without explicit programming. Instead of writing out every instruction, machines can improve at a specific task by analyzing data. This data can be used to predict future values, classify information, or find hidden patterns.
 
 #### Types of Machine Learning
 There are two main categories of machine learning: **supervised learning** and **unsupervised learning**. These categories are determined by the type of data and the learning objective.
