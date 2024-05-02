@@ -126,3 +126,59 @@ $$
 where:
 * `x` is the input value to the function.
 * `e` is the base of the natural logarithm (approximately 2.71828).
+
+### Stratified shuffling 
+It is a technique used in machine learning to split a dataset into training and test sets while maintaining the proportion of classes in both sets.
+
+**Example**: Imagine we have a dataset of images:
+- **Class Imbalance**: Let's say the dataset has many pictures of cats (majority class) and very few pictures of birds (minority class).
+- **Traditional Shuffling**: If we simply shuffle the entire dataset randomly, the training set might end up with mostly cat pictures, neglecting the birds. This can lead to a model that performs well on classifying cats but struggles with birds.
+- **Stratified Shuffling**: By shuffling each class (cats and birds) independently before splitting, we ensure both training and testing sets have a similar proportion of cats and birds, allowing the model to learn effectively from both classes.
+
+**Code**:
+```python
+from sklearn.model_selection import StratifiedShuffleSplit
+
+# Sample data (assuming you have features 'X' and target variable 'y')
+X = ...  # Features
+y = ...  # Target labels
+
+# Define the split ratio for training and testing data (e.g., 80% for training)
+test_size = 0.2
+
+# Create a StratifiedShuffleSplit object
+strat_split = StratifiedShuffleSplit(n_splits=1, test_size=test_size, random_state=42)
+
+# Split the data into training and testing sets while maintaining class distribution
+# The split method of the object takes the features and target variable as input and returns indices for training and testing sets. 
+for train_index, test_index in strat_split.split(X, y):
+  X_train, X_test = X[train_index], X[test_index]
+  y_train, y_test = y[train_index], y[test_index]
+```
+
+
+
+--- 
+
+## Train Test Split Code
+We can also code the train-test split function easily:
+```python
+def split(data, test_ratio):
+    test_size = int(len(data) * test_ratio)
+    train_size = len(data)-test_size
+    return data.iloc[:train_size], data.iloc[train_size:]
+
+train_data, test_data = split(data, 0.2)
+```
+
+We can also shuffle data using the ``random.shuffle()`` method of the ``NumPy`` module:
+```python
+def split(data, test_ratio):
+    shuffled_indices = np.random.permutation(len(data))
+    test_size = int(len(data) * test_ratio)
+    test_indices = shuffled_indices[:test_size]
+    train_indices = shuffled_indices[test_size:]
+    return data.iloc[train_indices], data.iloc[test_indices]
+
+train_data, test_data = split(data, 0.2)
+```
