@@ -182,3 +182,33 @@ def split(data, test_ratio):
 
 train_data, test_data = split(data, 0.2)
 ```
+
+---
+
+### Imputing
+Imputing refers to the process of filling in missing values in a dataset with estimated or calculated values. This is important because many machine learning algorithms cannot handle missing data and require complete datasets to function properly.
+
+Here are the common types of imputation techniques:
+* **Mean/Median/Mode Imputation:** Replaces missing values with the mean (average), median (middle value), or mode (most frequent value) for the specific feature (column). This is a simple and fast approach, but it can introduce bias if the missing data isn't randomly distributed.
+* **K-Nearest Neighbors (KNN) Imputation:** Uses the values of the k nearest neighbors (data points most similar to the one with missing values) to estimate the missing value. This method can be more accurate than mean/median/mode imputation, but it's computationally expensive and requires choosing an appropriate value for k.
+* **Interpolation:** Techniques like linear interpolation or spline interpolation estimate missing values based on existing data points. These methods work well for continuous features that have a smooth underlying trend.
+* **Model-Based Imputation:** Trains a separate model (e.g., decision tree) to predict missing values based on other features in the dataset. This can be effective, but it requires careful model selection and evaluation.
+
+### Scikit-learn Object Types
+Scikit-learn provides various object types for different machine learning tasks:
+
+* **Estimators:** These objects learn a model from your data. Examples include classification algorithms like `LogisticRegression`, regression algorithms like `LinearRegression`, clustering algorithms like `KMeans`, and dimensionality reduction algorithms like `PCA`.
+* **Transformers:** These objects preprocess data, such as scaling features or encoding categorical variables. Examples include `StandardScaler` for feature scaling, `OneHotEncoder` for categorical encoding, and `Imputer` for handling missing data.
+* **Pipelines:** These objects chain together multiple transformers and estimators to create a complete machine learning workflow. Pipelines can streamline your machine learning process and improve code organization.
+* **Validation Objects:** These objects are used for model selection and evaluation. Examples include `StratifiedShuffleSplit` for stratified data splitting, `GridSearchCV` for hyperparameter tuning, and `cross_val_score` for cross-validation.
+* **Metrics:** These functions calculate performance metrics for your model. Examples include `accuracy_score`, `precision_score`, `recall_score`, `f1_score` for classification, and `mean_squared_error`, `mean_absolute_error` for regression.
+
+### Feature Scaling and Standardization**
+Feature scaling or standardization is a preprocessing step that transforms features to a common range. This is often necessary for machine learning algorithms that are sensitive to the scale of the data. Different algorithms have different scaling requirements:
+
+* **Distance-based algorithms** (e.g., K-Nearest Neighbors, Support Vector Machines) rely on the Euclidean distance between data points. Feature scaling ensures that all features contribute equally to the distance calculation, preventing features with larger scales from dominating the distance metric.
+* **Gradient-based algorithms** (e.g., Linear Regression, Neural Networks) use the gradients of the cost function during training. Scaling features can improve the convergence rate of gradient-based algorithms.
+
+Here are two common scaling methods:
+* **StandardScaler:** This method transforms features by subtracting the mean and dividing by the standard deviation. It scales features to have a mean of 0 and a standard deviation of 1. This is a widely used scaling method that works well for most algorithms.
+* **MinMaxScaler:** This method scales features to a range between a minimum value (often 0) and a maximum value (often 1). This can be useful if the distribution of your features is skewed or you have outliers.
