@@ -50,7 +50,7 @@ The best fit line is the straight line that best represents the relationship bet
 ![multiple linear regression](https://imgur.com/Vloky0u.png)
 
 ### Important Algorithms and Terminologies related to Linear Regression and Machine Learning
-#### Cost or loss function
+#### Cost or Loss function
 The cost or loss function, also known as the objective function, is a mathematical function that quantifies the difference between the predicted values of a model and the actual values of the target variable (dependent variable) in a dataset. It represents how well the model is performing on the given data.
 
 In the context of linear regression, the most commonly used cost or loss function is the Mean Squared Error (MSE). The MSE measures the average squared difference between the predicted values and the actual values of the target variable.
@@ -127,6 +127,52 @@ where:
 * `x` is the input value to the function.
 * `e` is the base of the natural logarithm (approximately 2.71828).
 
+
+#### Decision Tree
+A decision tree is a supervised machine learning algorithm used for both classification and regression tasks. It is a tree-like structure where each internal node represents a "decision" based on the value of a feature, each branch represents the outcome of that decision, and each leaf node represents the final prediction or outcome.
+
+**When to Use**:
+- Decision trees are versatile and can be used for both classification and regression tasks.
+- They are particularly useful when the relationship between features and target variables is non-linear or complex.
+- Decision trees are easy to interpret and visualize, making them suitable for explaining the reasoning behind predictions.
+
+However, here are some things to consider:
+- **Overfitting**: Decision trees can be prone to overfitting if not carefully controlled. Techniques like pruning or setting a maximum depth can help mitigate this.
+- **Not ideal for high-dimensional data**: With a large number of features, decision trees can become complex and computationally expensive.
+- **Feature importance**: While interpretable, the importance of features in a decision tree can be biased towards features that appear earlier in the splitting process.
+
+**Choosing the Splitting Column**:
+- The choice of the feature to split on at each node is crucial for building an effective decision tree.
+- Different algorithms use various criteria to select the best splitting feature, such as information gain, Gini impurity, or entropy.
+- The goal is to select the feature that maximizes the purity of the resulting child nodes, leading to better separation of classes or reduction of variance.
+
+**Entropy and Information Gain**:
+- Entropy is a measure of impurity or disorder in a dataset. In the context of decision trees, entropy is used to quantify the randomness or unpredictability of the target variable's distribution at a node.
+- Low entropy indicates that the samples at a node belong predominantly to one class, while high entropy indicates a more evenly distributed mix of classes.
+- Information gain measures the reduction in entropy achieved by splitting a dataset on a particular feature. It represents the amount of information gained about the target variable by knowing the value of the feature.
+- A high information gain suggests that splitting on a particular feature results in better separation of classes or increased homogeneity within classes.
+
+```
+Information Gain(Feature) = Entropy(Parent) - (Weighted Average of Entropy(Children))
+```
+
+**Gini Impurity**:
+- Gini impurity is another measure of impurity used in decision trees.
+- It measures the probability of incorrectly classifying a randomly chosen element if it were randomly labeled according to the distribution of labels in the node.
+- A lower Gini impurity indicates greater purity or homogeneity of classes at a node, while a higher Gini impurity indicates greater impurity or mixed classes.
+
+```
+Gini Impurity = 1 - Σ(pi)^2
+```
+Here, ``pi`` is the proportion of data points belonging to class ``i``.
+
+#### High Entropy/Gini Impurity
+It represents a high level of uncertainty or class imbalance. Splitting on this feature is likely to improve the purity of the child nodes.
+#### Low Entropy/Gini Impurity
+It represents a low level of uncertainty or balanced classes. Splitting on this feature might not be as beneficial for separating the data further.
+
+---
+
 ### Stratified shuffling 
 It is a technique used in machine learning to split a dataset into training and test sets while maintaining the proportion of classes in both sets.
 
@@ -152,11 +198,9 @@ strat_split = StratifiedShuffleSplit(n_splits=1, test_size=test_size, random_sta
 # Split the data into training and testing sets while maintaining class distribution
 # The split method of the object takes the features and target variable as input and returns indices for training and testing sets. 
 for train_index, test_index in strat_split.split(X, y):
-  X_train, X_test = X[train_index], X[test_index]
-  y_train, y_test = y[train_index], y[test_index]
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
 ```
-
-
 
 --- 
 
@@ -198,12 +242,12 @@ Here are the common types of imputation techniques:
 Scikit-learn provides various object types for different machine learning tasks:
 
 * **Estimators:** These objects learn a model from your data. Examples include classification algorithms like `LogisticRegression`, regression algorithms like `LinearRegression`, clustering algorithms like `KMeans`, and dimensionality reduction algorithms like `PCA`.
-* **Transformers:** These objects preprocess data, such as scaling features or encoding categorical variables. Examples include `StandardScaler` for feature scaling, `OneHotEncoder` for categorical encoding, and `Imputer` for handling missing data.
+* **Transformers:** These objects pre-process data, such as scaling features or encoding categorical variables. Examples include `StandardScaler` for feature scaling, `OneHotEncoder` for categorical encoding, and `Imputer` for handling missing data.
 * **Pipelines:** These objects chain together multiple transformers and estimators to create a complete machine learning workflow. Pipelines can streamline your machine learning process and improve code organization.
 * **Validation Objects:** These objects are used for model selection and evaluation. Examples include `StratifiedShuffleSplit` for stratified data splitting, `GridSearchCV` for hyperparameter tuning, and `cross_val_score` for cross-validation.
 * **Metrics:** These functions calculate performance metrics for your model. Examples include `accuracy_score`, `precision_score`, `recall_score`, `f1_score` for classification, and `mean_squared_error`, `mean_absolute_error` for regression.
 
-### Feature Scaling and Standardization**
+### Feature Scaling and Standardization
 Feature scaling or standardization is a preprocessing step that transforms features to a common range. This is often necessary for machine learning algorithms that are sensitive to the scale of the data. Different algorithms have different scaling requirements:
 
 * **Distance-based algorithms** (e.g., K-Nearest Neighbors, Support Vector Machines) rely on the Euclidean distance between data points. Feature scaling ensures that all features contribute equally to the distance calculation, preventing features with larger scales from dominating the distance metric.
