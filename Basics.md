@@ -299,10 +299,18 @@ Support Vector Machine (SVM) is a powerful supervised machine learning algorithm
 
 Imagine an airport security checkpoint. The security officers need to separate passengers who pose a security risk from those who don't. SVM can help identify these two groups by finding the best line or boundary (called a hyperplane) that maximizes the margin between them. This margin represents the distance between the nearest data points of each class, ensuring a clear separation.
 
-Overall, SVM is ideal for scenarios where there's a need for precise classification in complex datasets with clear class boundaries.
+Overall, SVM is ideal for scenarios where there's a need for precise classification in complex datasets with clear class boundaries. So, suppose, if we have numerous decision boundaries (lines separating classes) then SVM helps us to decide the most optimal decision boundary.
+
+Example: ![SVM-image](https://imgur.com/QhL5OTl.png)
 
 In real life, SVM can be used in various applications such as:
 1. **Text classification**: to distinguish between spam and non-spam emails.
 2. **Image classification**: to identify objects in images, like cats and dogs.
 3. **Medical diagnosis**: to predict whether a patient has a certain disease based on their symptoms.
 
+**Gama** is a parameter that defines the influence of a single training example, also known as a support vector. It determines the reach or extent of influence of a single training example. 
+
+- **High gamma**: A high gamma value means that a training example has a high influence, and the decision boundary is more constrained to the training data. This can lead to a more complex and nonlinear decision boundary, potentially resulting in overfitting, especially when the training dataset is small. 
+- **Low gamma**: Conversely, a low gamma value means that a training example has less influence, and the decision boundary is smoother and more linear. This can result in underfitting, where the model fails to capture the complexity of the data.
+
+Example: ![Gamma-SVM-image](https://imgur.com/ly3YZah.png)
