@@ -280,7 +280,7 @@ Here are two common scaling methods:
 
 ### Accuracy, Precision, Recall, and F-1 score
 1. **Accuracy**: Accuracy measures the proportion of correct predictions out of the total number of predictions. It's calculated as the sum of true positives and true negatives divided by the total number of samples.
-2. **Precision**: Precision measures the proportion of true positive predictions out of all positive predictions made by the model. It indicates how many of t`git sthe predicted positive instances are actually positive.
+2. **Precision**: Precision measures the proportion of true positive predictions out of all positive predictions made by the model. It indicates how many of the predicted positive instances are actually positive.
 3. **Recall (Sensitivity)**: Recall measures the proportion of true positive predictions out of all actual positive instances in the data. It indicates how many of the actual positive instances were correctly identified by the model.
 4. **F1 Score**: The F1 score is the harmonic mean of precision and recall. It provides a balance between precision and recall, especially when the classes are imbalanced. 
 
@@ -291,3 +291,18 @@ Here are two common scaling methods:
 The precision-recall tradeoff is a balance between two important measures in classification: precision and recall. 
 
 Adjusting the model's decision threshold can impact these metrics: increasing the threshold tends to improve precision but decrease recall, and vice versa. Finding the right balance depends on the specific needs of the problem: sometimes it's more important to be precise, while other times it's crucial to catch all relevant instances.
+
+--- 
+
+### SVM
+Support Vector Machine (SVM) is a powerful supervised machine learning algorithm used for classification and regression tasks. It's particularly useful when dealing with complex datasets where there is a clear margin of separation between classes. 
+
+Imagine an airport security checkpoint. The security officers need to separate passengers who pose a security risk from those who don't. SVM can help identify these two groups by finding the best line or boundary (called a hyperplane) that maximizes the margin between them. This margin represents the distance between the nearest data points of each class, ensuring a clear separation.
+
+Overall, SVM is ideal for scenarios where there's a need for precise classification in complex datasets with clear class boundaries.
+
+In real life, SVM can be used in various applications such as:
+1. **Text classification**: to distinguish between spam and non-spam emails.
+2. **Image classification**: to identify objects in images, like cats and dogs.
+3. **Medical diagnosis**: to predict whether a patient has a certain disease based on their symptoms.
+
