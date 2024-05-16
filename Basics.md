@@ -331,6 +331,33 @@ We can use the `RandomForestClassifier` from `sklearn.ensemble` for the random f
 
 ---
 
+### Cross Validation
+Cross-validation is a technique used to assess how well a predictive model generalizes to an independent dataset. It involves splitting the dataset into multiple subsets, called folds, training the model on some folds, and evaluating its performance on the remaining fold. This process is repeated multiple times, each time with a different fold held out for evaluation. Cross-validation helps to ensure that the model's performance is not overly influenced by the particular way the data was split.
+
+Cross-validation is useful for several reasons:
+1. It provides a more robust estimate of the model's performance compared to a single train-test split, as it averages over multiple evaluations.
+2. It helps to detect overfitting by providing a more realistic estimate of how well the model will perform on unseen data.
+3. It maximizes the use of available data for both training and testing, especially in cases where the dataset is small.
+
+`scikit-learn` provides several functions for cross-validation, including `cross_val_score` and `cross_validate`, which automate the process of splitting the data, training the model, and evaluating its performance across multiple folds.
+
+**Example**:
+![Cross Validation](https://imgur.com/A9UkTkI.png)
+
+#### `KFold` and `StratifiedKFold`
+`KFold` and `StratifiedKFold` are both techniques used for splitting a dataset into multiple folds for cross-validation. However, they differ in how they handle the distribution of class labels or target values across the folds.
+1. `KFold`:
+   - `KFold` is a basic cross-validation technique that splits the dataset into `k` consecutive folds (or subsets) of equal size.
+   - Each fold is used once as a validation set while the k - 1 remaining folds form the training set.
+   - The process is repeated `k` times, with each fold used as the validation set exactly once.
+   - It does not take into account the distribution of class labels or target values, meaning that it may produce folds with imbalanced class distributions.
+2. `StratifiedKFold`:
+   - `StratifiedKFold` is a variation of `KFold` that ensures that each fold has the same distribution of class labels or target values as the entire dataset.
+   - It is particularly useful when dealing with imbalanced datasets, where one class may be much more prevalent than others.
+   - `StratifiedKFold` maintains the percentage of samples for each class in every fold, thereby reducing the risk of biased evaluation results.
+
+---
+
 ### Important Notes
 In `matplotlib`, interpolation refers to the method used to resample the image when displayed at a size different from its original resolution. 
 
