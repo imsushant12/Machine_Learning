@@ -212,11 +212,11 @@ y = ...  # Target labels
 test_size = 0.2
 
 # Create a StratifiedShuffleSplit object
-strat_split = StratifiedShuffleSplit(n_splits=1, test_size=test_size, random_state=42)
+stratified_split = StratifiedShuffleSplit(n_splits=1, test_size=test_size, random_state=42)
 
 # Split the data into training and testing sets while maintaining class distribution
 # The split method of the object takes the features and target variable as input and returns indices for training and testing sets. 
-for train_index, test_index in strat_split.split(X, y):
+for train_index, test_index in stratified_split.split(X, y):
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = y[train_index], y[test_index]
 ```
@@ -301,7 +301,7 @@ Imagine an airport security checkpoint. The security officers need to separate p
 
 Overall, SVM is ideal for scenarios where precise classification is needed in complex datasets with clear class boundaries. For example, if we have numerous decision boundaries (lines separating classes), SVM helps us decide on the most optimal boundary.
 
-Example: ![SVM-image](https://imgur.com/QhL5OTl.png)
+**Example**: ![SVM-image](https://imgur.com/QhL5OTl.png)
 
 In real life, SVM can be used in various applications such as:
 1. **Text classification**: distinguishing between spam and non-spam emails.
@@ -375,3 +375,31 @@ plt.imshow(data, cmap='Grays', interpolation='nearest')
 plt.imshow(data, cmap='plt.cm.gray_r', interpolation='nearest')
 plt.imshow(data, cmap='Oranges', interpolation='nearest')
 ```
+
+---
+
+### K Means Clustering
+K-Means clustering is an unsupervised machine learning algorithm used to partition a dataset into K distinct, non-overlapping groups or clusters. The main idea is to divide the data into K clusters in such a way that the sum of squared distances between the data points and the centroid of the cluster is minimized.
+
+#### What Does K Denote?
+In K-Means clustering, K represents the number of clusters that the algorithm should form from the data.
+
+#### How to Get the Optimal Value of K?
+Determining the optimal value of K is crucial for effective clustering. One commonly used method to find the optimal K is the **elbow method**.
+
+#### Elbow Technique
+The elbow method involves the following steps:
+1. **Run K-Means** for a range of values of K (e.g., from 1 to 10).
+2. For each value of K, **calculate the Within-Cluster Sum of Squares (WCSS)**, which is the sum of squared distances from each point to its assigned cluster centroid.
+3. **Plot the WCSS against the number of clusters K**.
+4. **Look for the "elbow" point** on the plot, where the rate of decrease in WCSS slows down significantly. This point often indicates the optimal number of clusters, as adding more clusters beyond this point does not significantly improve the clustering.
+
+**Example**:
+![K-means clustering](https://www.ejable.com/wp-content/uploads/2023/11/elbow-method-2.webp)
+
+#### When to Use K-Means Clustering?
+K-Means clustering is suitable for various applications, including:
+- **Customer Segmentation**: Grouping customers based on purchasing behavior.
+- **Image Segmentation**: Partitioning images into different regions.
+- **Document Clustering**: Grouping similar documents together.
+- **Anomaly Detection**: Identifying unusual data points in a dataset.
