@@ -3,6 +3,7 @@ Machine learning is a subfield of Artificial Intelligence (AI) that allows compu
 
 #### Types of Machine Learning
 There are two main categories of machine learning: **supervised learning** and **unsupervised learning**. These categories are determined by the type of data and the learning objective.
+
 * **Supervised Learning**: The data is labelled in supervised learning. This means each data point has a corresponding label or target value that the model tries to predict. During training, the model learns the relationship between the features (inputs) and the target variables (labels). Then, it can use this learned relationship to predict the target variable for new, unseen data points. 
     * Common supervised learning tasks include classification (e.g., spam detection, image recognition) and regression (e.g., weather forecasting, stock price prediction).
 
