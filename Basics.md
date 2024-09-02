@@ -31,7 +31,7 @@ There are two main categories of machine learning: **supervised learning** and *
 ### Linear Regression
 Linear regression is a fundamental statistical technique used for modelling the relationship between a dependent variable (often denoted as \(y\)) and one or more independent variables (often denoted as \(x\)). It assumes a linear relationship exists between the independent variable(s) and the dependent variable. Linear regression aims to find the best-fitting straight line that describes this relationship.
 
-The equation of a simple linear regression model with one independent variable can be expressed as:
+The equation of a simple linear regression model with one independent variable can be written as:
 
 \[ y = mx + c \]
 
